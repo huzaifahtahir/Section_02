@@ -4,6 +4,8 @@
 
 class FBullCowGame {
 public:
+	FBullCowGame();	// Constructor
+
 	int getMaxTries() const;
 	int getCurrentTry() const;
 	bool isGameWon() const;
@@ -14,7 +16,8 @@ public:
 
 
 private:
-	int myCurrentTry = 1;
-	int myMaxTries = 5;
+	//See Constructor for init
+	int myCurrentTry;
+	int myMaxTries;
 	bool isIsogram(std::string);
 };
