@@ -6,17 +6,17 @@ void FBullCowGame::Reset()
 	return;
 }
 
-int FBullCowGame::getMaxTries()
+int FBullCowGame::getMaxTries() const
 {
-	return 0;
+	return myMaxTries;
 }
 
-int FBullCowGame::getCurrentTry()
+int FBullCowGame::getCurrentTry() const 
 {
-	return 0;
+	return myCurrentTry;
 }
 
-bool FBullCowGame::isGameWon()
+bool FBullCowGame::isGameWon() const
 {
 	return false;
 }

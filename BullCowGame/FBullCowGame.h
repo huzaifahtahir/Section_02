@@ -4,15 +4,17 @@
 
 class FBullCowGame {
 public:
+	int getMaxTries() const;
+	int getCurrentTry() const;
+	bool isGameWon() const;
+
+
 	void Reset();	//TODO make a more rich return value
-	int getMaxTries();
-	int getCurrentTry();
-	bool isGameWon();
 	bool checkGuessValidity(std::string); //TODO make a more rich return value
 
 
 private:
-	int myCurrentTry;
-	int myMaxTry;
+	int myCurrentTry = 1;
+	int myMaxTries = 5;
 	bool isIsogram(std::string);
 };

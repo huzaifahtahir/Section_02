@@ -23,7 +23,7 @@
     <ProjectGuid>{F545A766-2709-4B49-ADB0-555B068ACDB9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BullCowGame</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
