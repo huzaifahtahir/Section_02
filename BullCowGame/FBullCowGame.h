@@ -2,22 +2,36 @@
 #include <iostream>
 #include <string>
 
-class FBullCowGame {
+using FString = std::string;
+using int32 = int;
+
+// values initialized to zero
+struct FBullCowCount 
+{
+	int32 bulls = 0;
+	int32 cows = 0;
+};
+
+class FBullCowGame 
+{
 public:
 	FBullCowGame();	// Constructor
 
-	int getMaxTries() const;
-	int getCurrentTry() const;
+	int32 getMaxTries() const;
+	int32 getCurrentTry() const;
+	int32 getHiddenWordLength() const;
 	bool isGameWon() const;
+	bool checkGuessValidity(FString) const ; //TODO make a more rich return value
 
 
 	void Reset();	//TODO make a more rich return value
-	bool checkGuessValidity(std::string); //TODO make a more rich return value
-
+	// counts bulls and cows, and increases try number assuming valid guess
+	FBullCowCount SubmitGuess(FString Guess);
 
 private:
 	//See Constructor for init
-	int myCurrentTry;
-	int myMaxTries;
-	bool isIsogram(std::string);
+	int32 myCurrentTry;
+	int32 myMaxTries;
+	bool isIsogram(FString);
+	FString myHiddenWord;
 };
